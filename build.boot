@@ -24,8 +24,7 @@
 
 (deftask build []
   (comp (speak)
-        (cljs)
-        ))
+        (cljs)))
 
 (deftask run []
   (comp (serve)
