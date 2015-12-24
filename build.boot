@@ -12,7 +12,8 @@
                  [devcards "0.2.1"]
                  [sablono "0.4.0"]
                  [crisptrutski/boot-cljs-test "0.2.0-SNAPSHOT" :scope "test"]
-                 [reagent "0.5.1"]])
+                 [reagent "0.5.1"]
+                 [binaryage/devtools "0.4.1"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
