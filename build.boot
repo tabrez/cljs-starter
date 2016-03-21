@@ -46,6 +46,7 @@
   "Simple alias to run application in development mode"
   []
   (comp (development)
+        (target "target")
         (run)))
 
 
