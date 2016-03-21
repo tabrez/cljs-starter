@@ -61,6 +61,7 @@
 
 
 (deftask testing []
+  (task-options! test-cljs {:js-env :phantom})
   (set-env! :source-paths #(conj % "test/cljs"))
   identity)
 
@@ -71,10 +72,10 @@
 
 (deftask test []
   (comp (testing)
-        (test-cljs :js-env :phantom
-                   :exit?  true)))
+        (test-cljs
+         :exit?  true)))
 
 (deftask auto-test []
   (comp (testing)
         (watch)
-        (test-cljs :js-env :phantom)))
+        (test-cljs)))
