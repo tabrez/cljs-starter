@@ -26,7 +26,7 @@
  '[tolitius.boot-check :as check])
 
 (deftask check []
-  (set-env! :source-paths #{"src" "test"})
+  (set-env! :source-paths #{"src/cljs" "test/cljs"})
   (comp
    (check/with-bikeshed)
    (check/with-yagni)
@@ -55,9 +55,10 @@
 (deftask dev
   "Simple alias to run application in development mode"
   []
-  (comp (development)
-        (target "target")
-        (run)))
+  (comp
+   (development)
+   (target "target")
+   (run)))
 
 
 (deftask testing []

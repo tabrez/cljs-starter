@@ -1,6 +1,5 @@
 (ns cljs-starter.app
   (:require [reagent.core :as reagent :refer [atom render]]
-            [sablono.core :as sab]
             [devcards.core :as dc]
             [cljs.test :as t :refer [report] :include-macros true]
             [devtools.core :as devtools])
